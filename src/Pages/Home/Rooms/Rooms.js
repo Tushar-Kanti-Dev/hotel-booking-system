@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from 'react';
+
 import useRooms from '../../../hooks/useRooms';
+import Room from '../Room/Room';
 
 const Rooms = () => {
     const [rooms, setRooms] = useRooms();
     return (
-        <div>
+        <div className="rooms-container">
             <h1>This is rooms{rooms.length}</h1>
-            <div className="rooms-container">
+            <div className='row'>
                 {
-                    rooms.map
+                    rooms.map(room => <Room
+                        key={room.id}
+                        room = {room}
+                    ></Room>)
                 }
             </div>
         </div>
