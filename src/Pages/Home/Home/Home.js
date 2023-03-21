@@ -3,9 +3,12 @@ import Rooms from '../Rooms/Rooms';
 import hotel1 from '../../../images/hotel-img/hotel-1.jpg';
 import hotel2 from '../../../images/hotel-img/hotel-2.jpg';
 import { Link } from 'react-router-dom';
-import './Home.css'
+import './Home.css';
+import hotelvideo from '../../../images/videopic.jpg'
+import VideoImg from '../VideoImg/VideoImg';
 
 const Home = () => {
+    
     return (
         <div>
             <Rooms></Rooms>
@@ -62,6 +65,12 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+            {/* video pic  */}
+            <section className='container-fluid mt-3'>
+                <div className="video-pic">
+                    <VideoImg></VideoImg>
                 </div>
             </section>
         </div>
